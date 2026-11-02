@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151a2d">
+  <title>Emporio Music Store | Customer Support</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="logo" aria-hidden="true">♫</div>
+      <div><h1>Emporio Music Store</h1><p>Virtual assistant • Campo Grande/MS</p></div>
+      <span class="status">Local AI assistant</span>
+    </header>
+    <section class="chat" aria-label="Conversation with the assistant">
+      <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions">
+        <div class="bubble assistant">Hello! 🎸 I'm the Emporio Music Store assistant. I can help with musical instruments, prices, availability and store policies. Inventory is a snapshot, not real-time stock confirmation.</div>
+      </div>
+      <div class="suggestions" aria-label="Suggested questions">
+        <button type="button" data-question="What are your Saturday opening hours?">Saturday hours</button>
+        <button type="button" data-question="What is the price of the Takamine GD20?">Takamine GD20 price</button>
+        <button type="button" data-question="Can I return an online purchase?">Returns</button>
+      </div>
+      <form id="chat-form" class="composer">
+        <label class="sr-only" for="message">Your message</label>
+        <input id="message" name="message" maxlength="4000" autocomplete="off" placeholder="Ask a question..." required>
+        <button id="send" type="submit">Send <span aria-hidden="true">➤</span></button>
+      </form>
+      <div class="foot"><span id="notice" role="status">Some information may require confirmation from the store.</span><button type="button" id="reset">New conversation</button></div>
+    </section>
+  </main>
+</body>
+</html>
